@@ -1,0 +1,86 @@
+html{
+	height: 100%;
+}
+h1 {
+	color: white;
+	font-size: 50px;
+	font-family: monospace;
+	text-align: center;
+	text-shadow: 5px 5px black;
+}
+p {
+	text-align: justify;
+}
+body{
+	background: linear-gradient(darkblue 60%, black);
+}
+h2{
+	text-align: center;
+	text-shadow: 2px 2px black;
+	text-transform: uppercase;
+	color: white;
+}
+
+figcaption{
+	text-align: center;
+	font-style: italic;
+}
+
+#eng_button{
+	position: absolute;
+	top: 20px;
+	right: 40px;
+	border-radius: 3px;
+	visibility: hidden;
+}
+
+#eng_button:hover{
+	background-color: cyan;
+}
+.topics-pane{
+	background-color: cyan;
+	font-weight: bold;
+	font-size: large;
+	display: flex;
+	border-radius: 5px;
+	border: 3px solid white;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-right: 5px;
+	padding-left: 5px;
+	justify-content: space-between;
+	text-transform: uppercase;
+}
+
+.topics-pane a{
+	color: black;
+	text-decoration: none;
+}
+.topics-pane > a:hover{
+	color: red;
+}
+a{
+	text-decoration: none;
+}
+.central-pane{
+	background-color: #3399ff;
+	font-size: large;
+	left:120px;
+	border-radius: 10px;
+	border: 2px dashed black;
+	margin-top: 20px;
+	padding-left: 3px;
+	padding-right: 3px;
+	overflow: hidden;
+	
+
+}
+
+.image-container{
+	margin: 10px;
+	display: flex;
+	flex-direction: column;
+}
+.image-container > em{
+	text-align: center;
+}
