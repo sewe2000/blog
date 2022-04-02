@@ -1,14 +1,20 @@
+
+:root{
+	--hacker-green: rgb(19,161,14);
+	--alpha-black: #000c;
+}
+
 html{
 	height: 100%;
 	background-image: url(../images/background.png);
 }
 h1 {
-	color: rgb(19,161,14); /* Hacker green */
+	color: var(--hacker-green); /* Hacker green */
 	font-size: 3rem;
 	font-family: monospace;
 	text-align: center;
 	text-transform: uppercase;
-	background-color: #000c;
+	background-color: var(--alpha-black);
 }
 p {
 	text-align: justify;
@@ -18,7 +24,7 @@ h2{
 	text-align: center;
 	text-shadow: 0.1em 0.1em black;
 	text-transform: uppercase;
-	color: rgb(19,161,14); /* Hacker green */
+	color: var(--hacker-green); /* Hacker green */
 }
 
 figcaption{
@@ -38,11 +44,11 @@ figcaption{
 	background-color: cyan;
 }
 .topics-pane{
-	background-color: #000c;
+	background-color: var(--alpha-black);
 	font-weight: bold;
 	font-size: large;
 	display: flex;
-	border: 2px solid rgb(19,161,14); /* Hacker green */
+	border: 2px solid var(--hacker-green); /* Hacker green */
 	padding: 0.2em;
 	justify-content: space-between;
 	text-transform: uppercase;
@@ -52,7 +58,7 @@ a:visited {
 	color: white;
 }
 .topics-pane a{
-	color: rgb(19,161,14); /* Hacker green */
+	color: var(--hacker-green); /* Hacker green */
 	text-decoration: none;
 }
 .topics-pane > a:hover{
@@ -64,7 +70,7 @@ a{
 
 
 .central-pane{
-	background-color: #000c;
+	background-color: var(--alpha-black);
 	color: white;
 	font-size: large;
 	border-radius: 0.5em;
