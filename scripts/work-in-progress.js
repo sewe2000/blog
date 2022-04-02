@@ -5,5 +5,5 @@ for(link of links) {
 }
 
 function workInProgressMenu() {
-	alert('Ups! Niestety, ta podstrona jest jeszcze w trakcie wykonywania 😟');
+	alert('Niestety ta podstrona nie jest jeszcze gotowa. Proszę o cierpliwość. Na pewno kiedyś ją zakoduję 👨‍💻');
 }
