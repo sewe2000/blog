@@ -1,25 +1,24 @@
 html{
 	height: 100%;
+	background-image: url(../images/background.png);
 }
 h1 {
-	color: white;
+	color: rgb(19,161,14); /* Hacker green */
 	font-size: 3rem;
 	font-family: monospace;
 	text-align: center;
-	text-shadow: 0.3rem 0.3rem black;
 	text-transform: uppercase;
+	background-color: #000c;
 }
 p {
 	text-align: justify;
-}
-body{
-	background: linear-gradient(darkblue 60%, black);
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 h2{
 	text-align: center;
 	text-shadow: 0.1em 0.1em black;
 	text-transform: uppercase;
-	color: white;
+	color: rgb(19,161,14); /* Hacker green */
 }
 
 figcaption{
@@ -39,28 +38,34 @@ figcaption{
 	background-color: cyan;
 }
 .topics-pane{
-	background-color: cyan;
+	background-color: #000c;
 	font-weight: bold;
 	font-size: large;
 	display: flex;
-	border: 2px solid white;
+	border: 2px solid rgb(19,161,14); /* Hacker green */
 	padding: 0.2em;
 	justify-content: space-between;
 	text-transform: uppercase;
 }
 
+a:visited {
+	color: white;
+}
 .topics-pane a{
-	color: black;
+	color: rgb(19,161,14); /* Hacker green */
 	text-decoration: none;
 }
 .topics-pane > a:hover{
-	color: red;
+	color: white;
 }
 a{
 	text-decoration: none;
 }
+
+
 .central-pane{
-	background-color: #3399ff;
+	background-color: #000c;
+	color: white;
 	font-size: large;
 	border-radius: 0.5em;
 	margin-top: 1em;
