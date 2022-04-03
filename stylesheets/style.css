@@ -7,7 +7,6 @@
 html{
 	height: 100%;
 	background-image: url(../images/background.png);
-	overflow: scroll;
 }
 body{
 	margin: 0px;
@@ -90,6 +89,10 @@ a{
 
 }
 
+.mobile-navigation-bar {
+	display: none;
+}
+
 @media all and (max-width: 500px) {
 	.topics-pane{
 		display: none;
@@ -115,6 +118,9 @@ a{
 	}
 	figure{
 		display: none;
+	}
+	.close{
+		display: inline;
 	}
 
 }
