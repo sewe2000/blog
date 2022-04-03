@@ -43,6 +43,9 @@ figcaption{
 	visibility: hidden;
 }
 
+nav{
+	display: initial;
+}
 #eng_button:hover{
 	background-color: cyan;
 }
