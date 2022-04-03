@@ -50,7 +50,7 @@ figcaption{
 .topics-pane{
 	background-color: var(--alpha-black);
 	font-weight: bold;
-	font-size: 1.3em;
+	font-size: 1.2em;
 	display: flex;
 	border: 2px solid var(--hacker-green); /* Hacker green */
 	padding: 0.2em;
@@ -73,6 +73,9 @@ a{
 	text-decoration: none;
 }
 
+.close{
+	display: none;
+}
 
 .central-pane{
 	background-color: var(--alpha-black);
