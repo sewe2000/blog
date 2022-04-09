@@ -68,7 +68,11 @@ nav{
 }
 
 a:visited:not(nav a) {
-	color: var(--hacker-green);
+    color: white;
+}
+
+a:link:not(nav a) {
+    color: white;
 }
 
 nav a:hover{
