@@ -7,7 +7,6 @@
 html{
 	height: 100%;
 	background-image: url(../images/background.png);
-	background-size: cover;
 }
 body{
 	margin: 0px;
@@ -31,6 +30,12 @@ h2{
 	color: var(--hacker-green); /* Hacker green */
 }
 
+.mail {  font-size: .8em;}
+
+h5,h6{
+    margin: .1em;
+}
+
 figcaption{
 	text-align: center;
 	font-style: italic;
@@ -46,6 +51,7 @@ figcaption{
 
 nav{
 	display: initial;
+	font-family: 'Quicksand', sans-serif;
 }
 #eng_button:hover{
 	background-color: cyan;
@@ -61,8 +67,13 @@ nav{
 	text-transform: uppercase;
 }
 
-a:visited {
+a:visited:not(nav a) {
 	color: white;
+}
+
+nav a:hover{
+
+    color: white;
 }
 .topics-pane a{
 	color: var(--hacker-green); /* Hacker green */
@@ -71,6 +82,9 @@ a:visited {
 }
 .topics-pane > a:hover{
 	color: white;
+}
+a:hover:not(nav a){
+	color: var(--hacker-green);
 }
 a{
 	text-decoration: none;
@@ -95,6 +109,32 @@ a{
 
 .mobile-navigation-bar {
 	display: none;
+}
+
+.courses-nav{
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.courses-nav img{
+	height: 10em;
+	width: 10em;
+	padding-left: 3em;
+	padding-right: 3em;
+}
+
+.courses-nav img:hover{
+    transform: scale(1.5);
+}
+
+.return-to-menu{
+    font-size: 1em;
+    background-color: var(--alpha-black);
+    border: 3px solid var(--hacker-green);
+    border-radius: .5em;
+    color: var(--hacker-green);
+    padding: .3em;
 }
 
 @media all and (max-width: 500px) {

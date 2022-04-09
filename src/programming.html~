@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Seweryn P.">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Programowanie</title>
+	<link rel="stylesheet" href="../stylesheets/style.css">
+	<script src="../scripts/work-in-progress.js" defer></script>
+	<script src="../scripts/mobile-navigation.js" defer></script>
+</head>
+<body>
+	<nav class="mobile-navigation-bar">≡</nav>
+	<h1 style="text-align:center;">Programowanie</h1>
+	<main class="central-pane" style="height: 20em;">
+	<h2>Dostępne kursy</h2>
+    <nav class="courses-nav">
+        <a class="work-in-progress" href="">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/800px-ISO_C%2B%2B_Logo.svg.png" alt="Logo C++" >
+        </a>
+        <a class="work-in-progress" href="">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/The_C_Programming_Language_logo.svg/1024px-The_C_Programming_Language_logo.svg.png" alt="Logo C" >
+        </a>
+        <a class="work-in-progress" href="">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/C_Sharp_wordmark.svg/1024px-C_Sharp_wordmark.svg.png" alt="Logo C#" >
+        </a>
+        <a class="work-in-progress" href="">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/120px-HTML5_logo_and_wordmark.svg.png" alt="Logo HTML" >
+        </a>
+    </nav>
+
+	</main>
+
+</body>
+</html>
