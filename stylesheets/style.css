@@ -1,33 +1,48 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Roboto&family=Roboto+Slab&display=swap');
 :root{
 	--hacker-green: rgb(19,161,14);
 	--alpha-black: #000c;
+	--color1: #020024;
+	--color2: #03036a;
+	--color3: #006aff;
+	--color2alpha: #04036a33;
 }
 
 html{
 	height: 100%;
-	background-image: url(../images/background.png);
+        background: rgb(2,0,36);
+        background: linear-gradient(171deg, rgba(2,0,36,1) 0%, rgba(3,3,106,1) 35%, rgba(0,106,255,1) 100%);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 body{
-	margin: 0px;
+	font-family: 'Comfortaa', cursive;
+	margin: 0;
 }
 h1 {
-	color: var(--hacker-green); /* Hacker green */
+	color: var(--color3); /* Hacker green */
 	font-size: 3rem;
+	font-weight: bold;
 	font-family: monospace;
 	text-align: center;
 	text-transform: uppercase;
-	background-color: var(--alpha-black);
+	font-family: 'Roboto Slab', serif;
 }
 p {
-	text-align: justify;
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	max-width: 75ch;
+	font-size: 1.7em;
+	margin: auto;
+	line-height: 1em;
 }
 h2{
 	text-align: center;
-	text-shadow: 0.1em 0.1em black;
 	text-transform: uppercase;
-	color: var(--hacker-green); /* Hacker green */
+	color: var(--color3); /* Hacker green */
+	font-size: 2.5em;
+	font-family: 'Roboto Slab', serif;
+	font-weight: bold;
 }
 
 .mail {  font-size: .8em;}
@@ -51,18 +66,20 @@ figcaption{
 
 nav{
 	display: initial;
-	font-family: 'Quicksand', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 #eng_button:hover{
 	background-color: cyan;
 }
 .topics-pane{
-	background-color: var(--alpha-black);
+        background-color: var(--color2alpha);
 	font-weight: bold;
 	font-size: 1.2em;
 	display: flex;
-	border: 2px solid var(--hacker-green); /* Hacker green */
-	padding: 0.2em;
+	border: 2px solid var(--color3); /* Hacker green */
+	padding-inline: .6em;
+	margin: 4rem;
+	border-radius: 1em;
 	justify-content: space-between;
 	text-transform: uppercase;
 }
@@ -75,20 +92,16 @@ a:link:not(nav a) {
     color: white;
 }
 
-nav a:hover{
-
-    color: white;
-}
 .topics-pane a{
-	color: var(--hacker-green); /* Hacker green */
+    color: white;
 	text-decoration: none;
 	text-align: center;
 }
 .topics-pane > a:hover{
-	color: white;
+	color: var(--color3);
 }
 a:hover:not(nav a){
-	color: var(--hacker-green);
+	color: var(--color3);
 }
 a{
 	text-decoration: none;
@@ -99,15 +112,12 @@ a{
 }
 
 .central-pane{
-	background-color: var(--alpha-black);
+    background-color: var(--color1);
+	margin: 4rem;
 	color: white;
 	font-size: large;
 	border-radius: 0.5em;
-	margin-top: 1em;
-	padding-left: 0.5em;
-	padding-right: 0.5em;
-	overflow: hidden;
-	
+	padding: .5em;
 
 }
 
@@ -119,6 +129,7 @@ a{
 	display: grid;
 	grid-template-rows: 1fr;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	min-height: 20em;
 }
 
 .courses-nav img{
@@ -126,6 +137,7 @@ a{
 	width: 10em;
 	padding-left: 3em;
 	padding-right: 3em;
+	transition: 1s;
 }
 
 .courses-nav img:hover{
@@ -134,12 +146,23 @@ a{
 
 .return-to-menu{
     font-size: 1em;
-    background-color: var(--alpha-black);
-    border: 3px solid var(--hacker-green);
+    background-color: var(--color2alpha);
+    border: 3px solid var(--color3);
     border-radius: .5em;
-    color: var(--hacker-green);
+    color: var(--color3);
     padding: .3em;
 }
+
+footer {
+    background-color: var(--color1);
+    padding: 1rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 
 @media all and (max-width: 500px) {
 	.topics-pane{
@@ -153,22 +176,31 @@ a{
 		margin-right: 0.2em;
 	}
 	.mobile-navigation-bar{
-		color: var(--hacker-green);
+		color: var(--color3);
 		font-size: 3em;
 		width: 10%;
-		background-color: black;
+		background-color: var(--color2);
 		display: block;
 		position: sticky;
 		top: 0;
 		left: 0;
 		text-align: center;
-		border: 1px solid var(--hacker-green);
+		border: 1px solid var(--color3);
 	}
 	figure{
 		display: none;
 	}
 	.close{
 		display: inline;
+	}
+	.courses-nav {
+	    display: flex;
+	    flex-direction: column;
+	    align-items: center;
+	    flex-grow: 2;
+	}
+	.courses-nav a {
+	    padding: .8em;
 	}
 
 }

@@ -1,0 +1,35 @@
+[16:22:21.095] Global cache location '/home/seweryn/.cache/typescript/4.6', safe file path '/usr/lib/node_modules/typescript/lib/typingSafeList.json', types map path /usr/lib/node_modules/typescript/lib/typesMap.json
+[16:22:21.096] Processing cache location '/home/seweryn/.cache/typescript/4.6'
+[16:22:21.096] Trying to find '/home/seweryn/.cache/typescript/4.6/package.json'...
+[16:22:21.098] Loaded content of '/home/seweryn/.cache/typescript/4.6/package.json': {"private":true,"dependencies":{"types-registry":"^0.1.587"}}
+[16:22:21.098] Loaded content of '/home/seweryn/.cache/typescript/4.6/package-lock.json'
+[16:22:21.098] Finished processing cache location '/home/seweryn/.cache/typescript/4.6'
+[16:22:21.098] Process id: 32127
+[16:22:21.098] NPM location: /usr/bin/npm (explicit '--npmLocation' not  provided)
+[16:22:21.098] validateDefaultNpmLocation: false
+[16:22:21.099] Npm config file: /home/seweryn/.cache/typescript/4.6/package.json
+[16:22:21.099] Updating types-registry npm package...
+[16:22:21.099] Exec: /usr/bin/npm install --ignore-scripts types-registry@latest
+[16:22:22.790]     Succeeded. stdout:
+    
+    changed 1 package, and audited 2 packages in 1s
+
+found 0 vulnerabilities
+
+[16:22:22.790] Updated types-registry npm package
+[16:22:22.817] Got install request {"projectName":"/dev/null/inferredProject1*","fileNames":["/usr/lib/node_modules/typescript/lib/lib.es5.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2016.d.ts","/usr/lib/node_modules/typescript/lib/lib.dom.d.ts","/usr/lib/node_modules/typescript/lib/lib.dom.iterable.d.ts","/usr/lib/node_modules/typescript/lib/lib.webworker.importscripts.d.ts","/usr/lib/node_modules/typescript/lib/lib.scripthost.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.core.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.collection.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.generator.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.iterable.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.promise.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.proxy.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.reflect.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.symbol.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2016.array.include.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2016.full.d.ts","/home/seweryn/dev/projects/blog/scripts/mobile-navigation.js"],"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true,"maxNodeModuleJsDepth":2},"typeAcquisition":{"enable":true,"include":[],"exclude":[]},"unresolvedImports":[],"projectRootPath":"/home/seweryn/dev/projects/blog/scripts","kind":"discover"}
+[16:22:22.834] Loaded safelist from types map file '/usr/lib/node_modules/typescript/lib/typesMap.json'
+[16:22:22.834] Explicitly included types: []
+[16:22:22.835] Inferred typings from unresolved imports: []
+[16:22:22.835] Result: {"cachedTypingPaths":[],"newTypingNames":[],"filesToWatch":["/home/seweryn/dev/projects/blog/scripts/bower_components","/home/seweryn/dev/projects/blog/scripts/node_modules"]}
+[16:22:22.835] Finished typings discovery: {"cachedTypingPaths":[],"newTypingNames":[],"filesToWatch":["/home/seweryn/dev/projects/blog/scripts/bower_components","/home/seweryn/dev/projects/blog/scripts/node_modules"]}
+[16:22:22.836] DirectoryWatcher:: Added:: WatchInfo: /home/seweryn/dev/projects/blog/scripts/bower_components
+[16:22:22.836] DirectoryWatcher:: Added:: WatchInfo: /home/seweryn/dev/projects/blog/scripts/bower_components 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[16:22:22.837] Elapsed:: 1.1558560002595186ms DirectoryWatcher:: Added:: WatchInfo: /home/seweryn/dev/projects/blog/scripts/bower_components 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[16:22:22.837] DirectoryWatcher:: Added:: WatchInfo: /home/seweryn/dev/projects/blog/scripts/node_modules
+[16:22:22.837] DirectoryWatcher:: Added:: WatchInfo: /home/seweryn/dev/projects/blog/scripts/node_modules 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[16:22:22.837] Elapsed:: 0.07950099976733327ms DirectoryWatcher:: Added:: WatchInfo: /home/seweryn/dev/projects/blog/scripts/node_modules 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[16:22:22.838] Sending response:
+    {"projectName":"/dev/null/inferredProject1*","typeAcquisition":{"enable":true,"include":[],"exclude":[]},"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true,"maxNodeModuleJsDepth":2},"typings":[],"unresolvedImports":[],"kind":"action::set"}
+[16:22:22.838] Response has been sent.
+[16:22:22.838] No new typings were requested as a result of typings discovery

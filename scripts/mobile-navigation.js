@@ -6,6 +6,7 @@ closeButton.addEventListener('click', hideNavigationBar);
 
 function showNavigationBar() {
     const content = document.querySelector('.topics-pane');
+    content.style.margin = 0;
     content.style.display = 'flex';
     content.style.flexDirection = 'column';
     content.style.position = 'fixed';
