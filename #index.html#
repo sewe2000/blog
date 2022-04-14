@@ -18,6 +18,8 @@
           <h1> Strona główna </h1>
 	</header>
 
+	
+	
 	<button style="display: none;" id="eng_button"><a href="index-en.html">English version &#xfe4ea;</a></button>
 	<nav class="topics-pane">
 		<span class="close">✖</span>
@@ -30,14 +32,14 @@
 		<a  class="work-in-progress" href="">Sekcja piłkarska</a>
 	</nav>
 	<main class="central-pane">
-		<h2>O mnie</h2>
+		<h2> O mnie </h2>
 		<p> Cześć! Nazywam się Seweryn, a ty trafiłeś/aś na mojego bloga! Ten blog jest poświęcony moim zainteresowaniom.
 		Interesuję się programowaniem, informatyką, piłką nożną, grą w szachy oraz grami wideo. Lubię także oglądać seriale i 
 		okazjonalnie gram na instrumentach(pianinie i gitarze basowej).</p>
 		<p>Mam nadzieję, że spodoba ci się mój blog. Jeżeli masz jakąś propozycję wprowadzenia zmian do tej strony to skontaktuj się ze mną.
 		Kontakt do mnie podany jest na dole strony. Za wszelkie słowa pochwały i konstruktywnej krytyki z góry dziękuję.</p>
 		<hr>
-		<h2>Nowe artykuły</h2>
+		<h2> Nowe artykuły </h2>
 		<ul>
 			<li><a href="src/programming.html">Kursy programowania</a></li>
 			<li><a href="src/linux.html">Wprowadzenie do Linuxa</a></li>
