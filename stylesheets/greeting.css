@@ -1,0 +1,74 @@
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+.terminal-background
+{
+    position: fixed;
+    inset: 0;
+    background-color: black; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.greeting, .shell-sign {
+    font-family: 'VT323', monospace;
+    color: green;
+    font-size: 120px;
+    position: relative;
+    margin: 0.1em;
+}
+
+.greeting::before,
+.greeting::after {
+
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
+.greeting::after {
+    background-color: green;
+    width: 1ch;
+    height: 0.1em;
+    margin-top: 0.95em;
+    animation: revealing_characters 4s steps(24) forwards,
+    blink 500ms ease infinite; 
+    
+    
+}
+.greeting::before {
+    background-color: black;
+    animation: revealing_characters 4s steps(24) forwards; 
+}
+
+.enter-button {
+    font-family: 'VT323', monospace;
+    color: green;
+    border: 5px solid green;
+    border-radius: 5px;
+    font-size: 100px;
+    background-color: black;
+    position: absolute;
+    bottom: 25%;
+}
+
+.enter-button:hover {
+    color: white;
+    border: 5px solid white;
+}
+
+@keyframes revealing_characters {
+
+    to { left: 100%; }
+}
+
+@keyframes blink {
+
+    to { background: transparent; }
+}
+
+
+body {
+    overflow: hidden;
+}
