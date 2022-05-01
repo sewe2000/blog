@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Roboto&family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Roboto:ital,wght@0,300;0,700;1,300&display=swap');
 :root{
 	--hacker-green: rgb(19,161,14);
 	--alpha-black: #000c;
@@ -18,8 +18,12 @@ html{
 }
 body{
 	font-family: 'Comfortaa', cursive;
+	font-family: 'Roboto', sans-serif;
 	margin: 0;
 }
+
+h1, h2, h3 { line-height: 1em; }
+
 h1 {
 	color: var(--color3); /* Hacker green */
 	font-size: 3rem;
@@ -30,11 +34,17 @@ h1 {
 	font-family: 'Roboto Slab', serif;
 }
 p {
-	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	max-width: 75ch;
 	font-size: 1.7em;
 	margin: auto;
-	line-height: 1em;
+	line-height: 1.4em;
+	margin-top: 0.8em;
+	margin-bottom: 0.8em;
+	font-weight: 100;
+
+}
+p strong {
+    font-weight: 900;
 }
 h2{
 	text-align: center;
@@ -71,6 +81,18 @@ nav{
 #eng_button:hover{
 	background-color: cyan;
 }
+
+#chess-pieces-list {
+    list-style-type: none;
+}
+#chess-pieces-list > li { font-size: 2em; text-align: center; margin: .2em;}
+#chess-pieces-list > img {
+    max-width: 10em;
+    max-height: 10em;
+    margin: auto;
+    display: block;
+}
+
 .topics-pane{
         background-color: var(--color2alpha);
 	font-weight: bold;
@@ -83,6 +105,8 @@ nav{
 	justify-content: space-between;
 	text-transform: uppercase;
 }
+
+
 
 a:visited:not(nav a) {
     color: white;
