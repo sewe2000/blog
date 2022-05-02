@@ -1,6 +1,30 @@
+/*
+   ==================
+   Global stylesheets
+   ==================
+*/
+
+/*
+  ==================
+  Table of contents
+
+  1. Custom properties
+  2. Typography
+  3. Layout.
+  4. Colorscheme
+  5. Media queries
+     5.1 Mobile layout
+     5.2 Mobile typography
+
+  ========================
+
+*/
 
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Roboto:ital,wght@0,300;0,700;1,300&display=swap');
-:root{
+
+/* Custom properties */
+
+:root {
 	--hacker-green: rgb(19,161,14);
 	--alpha-black: #000c;
 	--color1: #020024;
@@ -9,30 +33,31 @@
 	--color2alpha: #04036a33;
 }
 
-html{
-	height: 100%;
-        background: rgb(2,0,36);
-        background: linear-gradient(171deg, rgba(2,0,36,1) 0%, rgba(3,3,106,1) 35%, rgba(0,106,255,1) 100%);
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-}
-body{
+/* Typography */
+
+body {
 	font-family: 'Comfortaa', cursive;
 	font-family: 'Roboto', sans-serif;
 	margin: 0;
 }
 
-h1, h2, h3 { line-height: 1em; }
-
-h1 {
-	color: var(--color3); /* Hacker green */
-	font-size: 3rem;
-	font-weight: bold;
-	font-family: monospace;
+h1, h2 {
+        line-height: 1em;
 	text-align: center;
 	text-transform: uppercase;
+	color: var(--color3); 
+	font-weight: 900;
 	font-family: 'Roboto Slab', serif;
 }
+
+h1 {
+	font-size: 3rem;
+}
+
+h2{
+	font-size: 2.5em;
+}
+
 p {
 	max-width: 75ch;
 	font-size: 1.7em;
@@ -41,64 +66,38 @@ p {
 	margin-top: 0.8em;
 	margin-bottom: 0.8em;
 	font-weight: 100;
-
 }
+
 p strong {
     font-weight: 900;
 }
-h2{
-	text-align: center;
-	text-transform: uppercase;
-	color: var(--color3); /* Hacker green */
-	font-size: 2.5em;
-	font-family: 'Roboto Slab', serif;
-	font-weight: bold;
+
+a{
+	text-decoration: none;
 }
 
-.mail {  font-size: .8em;}
-
-h5,h6{
-    margin: .1em;
-}
-
-figcaption{
-	text-align: center;
-	font-style: italic;
-}
-
-#eng_button{
-	position: absolute;
-	top: 20px;
-	right: 40px;
-	border-radius: 3px;
-	visibility: hidden;
-}
-
-nav{
-	display: initial;
-	font-family: 'Roboto', sans-serif;
-}
-#eng_button:hover{
-	background-color: cyan;
+.mail {
+    font-size: .8em;
 }
 
 #chess-pieces-list {
     list-style-type: none;
 }
-#chess-pieces-list > li { font-size: 2em; text-align: center; margin: .2em;}
-#chess-pieces-list > img {
-    max-width: 10em;
-    max-height: 10em;
-    margin: auto;
-    display: block;
+
+#chess-pieces-list > li {
+    font-size: 2em;
+    text-align: center;
+    margin: .2em;
 }
+
+/* Layout */
 
 .topics-pane{
         background-color: var(--color2alpha);
-	font-weight: bold;
+	font-weight: 900;
 	font-size: 1.2em;
 	display: flex;
-	border: 2px solid var(--color3); /* Hacker green */
+	border: 2px solid var(--color3);
 	padding-inline: .6em;
 	margin: 4rem;
 	border-radius: 1em;
@@ -106,57 +105,47 @@ nav{
 	text-transform: uppercase;
 }
 
-
-
-a:visited:not(nav a) {
+.topics-pane a{
     color: white;
+    text-decoration: none;
+    text-align: center;
 }
 
+a:visited:not(nav a),
 a:link:not(nav a) {
     color: white;
 }
 
-.topics-pane a{
-    color: white;
-	text-decoration: none;
-	text-align: center;
-}
-.topics-pane > a:hover{
+
+.topics-pane > a:hover,
+a:hover:not(nav a) {
 	color: var(--color3);
-}
-a:hover:not(nav a){
-	color: var(--color3);
-}
-a{
-	text-decoration: none;
+
 }
 
-.close{
-	display: none;
+#chess-pieces-list img {
+    max-width: 10em;
+    max-height: 10em;
+    margin: auto;
+    display: block;
 }
 
 .central-pane{
     background-color: var(--color1);
-	margin: 4rem;
-	color: white;
-	font-size: large;
-	border-radius: 0.5em;
-	padding: .5em;
+    margin: 4rem;
+    color: white;
+    font-size: large;
+    border-radius: 0.5em;
+    padding: .5em;
 
 }
 
-.mobile-navigation-bar {
+.mobile-navigation-bar,
+.close {
 	display: none;
 }
 
-.courses-nav{
-	display: grid;
-	grid-template-rows: 1fr;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-	min-height: 20em;
-}
-
-.courses-nav img{
+.courses-nav img {
 	height: 10em;
 	width: 10em;
 	padding-left: 3em;
@@ -168,7 +157,7 @@ a{
     transform: scale(1.5);
 }
 
-.return-to-menu{
+.return-to-menu {
     font-size: 1em;
     background-color: var(--color2alpha);
     border: 3px solid var(--color3);
@@ -187,19 +176,34 @@ footer {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* Colorscheme */
+
+html{
+	height: 100%;
+        background: rgb(2,0,36);
+        background: linear-gradient(171deg, rgba(2,0,36,1) 0%, rgba(3,3,106,1) 35%, rgba(0,106,255,1) 100%);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+/* Media queries */
 
 @media all and (max-width: 700px) {
+    /* Mobile layout */
+
 	.topics-pane{
 		display: none;
 		background-color: black;
 	}
-	.close{
+
+	.close {
 		color: var(--hacker-green);
 		color: red;
 		text-align: right;
 		margin-right: 0.2em;
 	}
-	.mobile-navigation-bar{
+
+	.mobile-navigation-bar {
 		color: var(--color3);
 		font-size: 3em;
 		width: 10%;
@@ -211,34 +215,39 @@ footer {
 		text-align: center;
 		border: 1px solid var(--color3);
 	}
-	p{
-	    font-size: 25px;
-	    word-break: break-word;
-	}
-	figure{
-		display: none;
-	}
+
 	.close{
 		display: inline;
 	}
+
 	.central-pane{
 	    margin-inline: .2em;
 	}
+
 	.courses-nav {
 	    display: flex;
 	    flex-direction: column;
 	    align-items: center;
 	    flex-grow: 2;
 	}
+
 	.courses-nav a {
 	    padding: .8em;
 	}
+
+	/* Mobile typography */
+
+	p {
+	    font-size: 25px;
+	    word-break: break-word;
+	}
+	
 	h1 {
 	    font-size: 40px;
 	}
+
 	footer{
 	    flex-direction: column;
 	}
-
 }
 
