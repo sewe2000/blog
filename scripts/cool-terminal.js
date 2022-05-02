@@ -10,8 +10,9 @@ function isItMobileDevice() {
 	|| navigator.userAgent.match(/Windows Phone/i);
 }
 
-
-if(!isItMobileDevice()) {
+const visited = sessionStorage.getItem('sewe-hub');
+if(!isItMobileDevice() && !visited) {
+    sessionStorage.setItem('sewe-hub', 'visited');
     const link = document.createElement('link');
     link.href = 'stylesheets/greeting.css';
     link.rel = 'stylesheet';
