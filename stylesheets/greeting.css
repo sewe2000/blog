@@ -17,7 +17,7 @@
 .greeting, .shell-sign {
     font-family: 'VT323', monospace;
     color: green;
-    font-size: 120px;
+    font-size: 10rem;
     position: relative;
     margin: 0.1em;
 }
@@ -49,10 +49,10 @@
     color: green;
     border: 5px solid green;
     border-radius: 5px;
-    font-size: 100px;
-    background-color: black;
+    font-size: 7rem;
     position: absolute;
-    bottom: 25%;
+    bottom: min(25%, 200px);
+    background-color: black;
 }
 
 .enter-button:hover {
@@ -73,4 +73,18 @@
 
 body {
     overflow: hidden;
+}
+
+/* MEDIA QUERIES */
+
+@media all and (max-width: 45em) 
+{
+ .greeting, .shell-sign {
+    font-size: 2.2rem;
+ }   
+ .enter-button {
+     width: 50vw;
+     height: 10vh;
+     font-size: 2rem;
+ }
 }
