@@ -176,6 +176,16 @@ footer {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+main img {
+	max-width: 95%;
+}
+
+main ul {
+	padding: 0;
+	list-style-type: none;
+}
+
+
 /* Colorscheme */
 
 html{

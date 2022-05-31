@@ -6,7 +6,7 @@
 	<meta name="description" content="Blog poświęcony programowaniu, informatyce i wielu innym rzeczom">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Blog Seweryna</title>
-	<link rel="stylesheet" href="stylesheets/style.css">
+	<link rel="stylesheet" href="/stylesheets/style.css" type="text/css">
 	<script src="https://kit.fontawesome.com/370a890af0.js" crossorigin="anonymous"></script>
 	<script src="scripts/work-in-progress.js" defer></script>
 	<script src="scripts/mobile-navigation.js" defer></script>
@@ -21,9 +21,9 @@
 
 	<nav class="topics-pane">
 		<span class="close">✖</span>
-		<a href="src/linux.html">Linux</a>
+		<a href="src/linux.php">Linux</a>
 		<a  href="src/programming.html">Programowanie</a>
-		<a  href="src/chess.html">Szachy</a>
+		<a  href="src/chess.php">Szachy</a>
 		<a  class="work-in-progress" href="">Gry wideo</a>
 		<a  class="work-in-progress" href="">Seriale</a>
 		<a  class="work-in-progress" href="">Kostki Rubika</a>
@@ -39,27 +39,15 @@
 		<hr>
 		<h2>Nowe artykuły</h2>
 		<ul>
-			<li><a href="src/programming.html">Kursy programowania</a></li>
-			<li><a href="src/linux.html">Wprowadzenie do Linuxa</a></li>
+			<?php
+				require "backend/get_article_names.php";	
+			?>
 		</ul>
 		
 	</main>
-	<footer>
-	                <section>
-			  <h3>Inne moje projekty:</h3>
-			  Zostaw followa na <a href="https://github.com/sewe2000"><i class="fab fa-github"></i></a><br>
-			  <a href="http://git.sewe-hub.xyz">Mój serwer git</a><br>
-			</section>
-			<section>
-			  <h3>Kontakt:</h3>
-			 <a class="mail" href="mailto:archdevx7d6@sewe-hub.xyz">archdevx7d6@sewe-hub.xyz</a><br>
-			 <a class="mail" href="mailto:serwer3103@gmail.com">serwer3103@gmail.com</a><br>
-			</section>
-			<section>
-			  <h3>Polecane strony:</h3>
-			  <a href="https://badclup.com">Badclup</a>
-			</section>
-         </footer>
+	<?php
+		require_once "footer.php";
+	?>
 
 
 </body>
