@@ -35,13 +35,13 @@
     width: 1ch;
     height: 0.1em;
     margin-top: 0.95em;
-    animation: revealing_characters 4s steps(24) forwards,
-    blink 500ms ease infinite; 
+    animation: revealing_characters 4s steps(24) 1s forwards,
+    blink 500ms ease 1s infinite; 
 }
 
 .greeting::before {
     background-color: black;
-    animation: revealing_characters 4s steps(24) forwards; 
+    animation: revealing_characters 4s steps(24) 1s forwards; 
 }
 
 .enter-button {
