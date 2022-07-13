@@ -1,3 +1,8 @@
+<?php
+    session_start();
+if(!isset($_SESSION['logged_in']))
+    $_SESSION['logged_in'] = false;
+?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -18,6 +23,20 @@
 	<header>
           <h1> Strona główna </h1>
 	</header>
+    <?php
+     if($_SESSION['logged_in'] === false) {
+     echo '<div class="login-buttons-container">
+     <button><a href="login.html">Zaloguj się</a></button>
+     <button><a href="signin.html">Zarejestruj się</a></button>
+     </div>';
+     } else {
+        echo '<div class="login-buttons-container">
+     <p>Zalogowany jako <strong>'.$_SESSION["username"].'</strong></p>
+     <button><a href="backend/logout.php">Wyloguj się</a></button>
+     </div>';
+     }
+    ?>
+    
 
 	<nav class="topics-pane">
 		<span class="close">✖</span>

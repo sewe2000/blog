@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Zarejestruj się w serwisie sewe-hub</title>
+    <link href="stylesheets/login.css" rel="stylesheet">
+    <script type="module" src="scripts/validate-signin-form.js" defer></script>
+  </head>
+  <body>
+    <form action="backend/signin.php" method="post">
+      <label for="username">Nazwa użytkownika</label>
+      <input id="username" name="username" type="text" placeholder="Wpisz swoją nazwę użytkownika"> 
+      <label for="pass">Hasło</label>
+      <input id="pass" name="pass" type="password" placeholder="Wpisz swoje hasło">
+      <label style="font-size: .8em;">Chcę otrzymywać powiadomienia o nowych artykułach na skrzynkę pocztową <input type="checkbox" class="notify-checkbox"></label>
+      <label for="email" disabled="true">Email (opcjonalnie)</label>
+      <input id="email" name="email" type="email" placeholder="Wpisz swój email" disabled="true">
+      <input type="submit" value="Zarejestruj się">
+    </form>
+  </body>
+</html>
