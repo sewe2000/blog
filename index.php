@@ -32,7 +32,9 @@ if(!isset($_SESSION['logged_in']))
      } else {
         echo '<div class="login-buttons-container">
      <p>Zalogowany jako <strong>'.$_SESSION["username"].'</strong></p>
-     <button><a href="backend/logout.php">Wyloguj się</a></button>
+     <form method="post" action="backend/logout.php" style="display:inline;">
+	<button>Wyloguj się</button>
+     </form>
      </div>';
      }
     ?>
