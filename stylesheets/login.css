@@ -1,4 +1,4 @@
-/* Stylesheet for styling login.html */
+/* Stylesheet for styling login.html and signin.html */
 
 :root {
 
@@ -28,6 +28,7 @@ form {
    border: 5px solid white;
    border-radius: 10px;
    padding: 1.2em;
+   width: min(30em, 90vw);
 }
 
 form input {
@@ -40,3 +41,9 @@ form label {
     color: white;
     font-family: 'Roboto Slab', serif;
 }
+
+.notification-label {
+    font-size: .8em;
+    padding-block: 1em;
+}
+
