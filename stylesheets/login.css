@@ -29,17 +29,20 @@ form {
    border-radius: 10px;
    padding: 1.2em;
    width: min(30em, 90vw);
+   box-shadow: 10px 10px var(--color1);
 }
 
 form input {
     margin-block: .5em;
     border-radius: 10px;
     padding: .2em;
+    box-shadow: 5px 5px var(--color1);
 }
 
 form label {
     color: white;
     font-family: 'Roboto Slab', serif;
+    margin-block: .2em;
 }
 
 .notification-label {
