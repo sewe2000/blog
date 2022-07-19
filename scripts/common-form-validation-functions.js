@@ -1,5 +1,8 @@
 import insertAfter from './insert-after.js';
 
+const USERNAME_MAX_LENGTH = 15;
+const EMAIL_MAX_LENGTH = 40;
+
 export function checkIfEmpty(form) {
   const inputs = document.querySelectorAll('input:not(input:disabled)');
   let isEmpty = false;
@@ -13,6 +16,23 @@ export function checkIfEmpty(form) {
       }
   });
   return isEmpty;
+}
+
+export function isLengthOK(form, withEmail) {
+    const username = form.querySelector('input[name="username"]');
+
+    if(username.value.length > USERNAME_MAX_LENGTH) {
+	changeToInvalidStyle(username, `Nazwa użytkownika nie może być dłuższa niż ${USERNAME_MAX_LENGTH} znaków!`);
+	return false;
+    }
+    if(withEmail) {
+	const email = form.querySelector('input[name="email"]');
+	if(email.value.length > EMAIL_MAX_LENGTH) {
+	    changeToInvalidStyle(email, `Email nie może być dłuższy niż ${EMAIL_MAX_LENGTH} znaków!`);
+	    return false;
+	}
+    }
+    return true;
 }
 
 export function clearError(inputNode, form) {
@@ -47,11 +67,11 @@ export function validateFormWithDataBase(form, validatorFilename, isLoginForm) {
 	}).then(response => {
 	    let inputField;
 	    response.text().then(text => {
-		if(text.includes('username')) {
+		if(text === 'Reserved username') {
 		    inputField = document.querySelector('input[name="username"]');
 		    changeToInvalidStyle(inputField, isLoginForm? "Nieprawidłowa nazwa użytkownika" : "Ta nazwa użytkownika jest już zajęta!");
 		}
-		else if(text.includes('email')) {
+		else if(text === 'Reserved email') {
 		    inputField = document.querySelector('input[name="email"]');
 		    changeToInvalidStyle(inputField, "Ten email jest już zarejestrowany!");
 		}

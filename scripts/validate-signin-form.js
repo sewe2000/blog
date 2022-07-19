@@ -1,4 +1,4 @@
-import {clearError, checkIfEmpty, changeToInvalidStyle, validateFormWithDataBase} from './common-form-validation-functions.js'
+import {clearError, checkIfEmpty, changeToInvalidStyle, validateFormWithDataBase, isLengthOK} from './common-form-validation-functions.js'
 
 const form = document.querySelector('form');
 const checkbox = document.querySelector('.notify-checkbox');
@@ -13,7 +13,7 @@ checkbox.addEventListener('change', () => {
     
 form.addEventListener('submit', event => {
     event.preventDefault();
-    if(!checkIfEmpty(form)) {
+    if(!checkIfEmpty(form) && isLengthOK(form, true)) { 
 	validateFormWithDataBase(form, 'validate_signin_data', false);
     }
 });
