@@ -1,6 +1,6 @@
 <?php
 
-require_once "sql_admin_credentials.php";
+require_once 'db.php';
 session_start();
 
 if(isset($_POST['username'], $_POST['pass'])) {
@@ -10,30 +10,20 @@ if(isset($_POST['username'], $_POST['pass'])) {
     die('Please provide username AND password!');
 }
 
+$query = "SELECT username FROM user WHERE username=:user AND password=SHA2(:pass, 256)";
+$row_count = get_row_count($query, ['user' => $username, 'pass' => $pass]);
 
-$conn = mysqli_connect($host, $user, $password, $db_name);
-if($conn->connect_error) {
-    die("Couldn't connect to the database. Error: ".$conn->connect_errno);
-}
-
-$username_pure = mysqli_real_escape_string($conn, $username);
-$pass_pure = mysqli_real_escape_string($conn, $pass);
-
-$query = "SELECT username FROM user WHERE username='{$username_pure}' AND password=SHA2('{$pass_pure}', 256)";
-$result = $conn->query($query);
-
-if($result->num_rows > 0) {
+if($row_count > 0) {
     $_SESSION['logged_in'] = true;
     $_SESSION['username'] = $username;
     header("Location: ../index.php");
 } else {
-    $query = "SELECT username FROM user WHERE username='{$username_pure}'";
-    $result = $conn->query($query);
-    if($result->num_rows === 0)
+    $query = "SELECT username FROM user WHERE username=:user";
+    $row_count = get_row_count($query, ['user' => $username]);
+    if($row_count === 0)
         die("Invalid username");
     else
        die("Invalid password");
 }
-$conn->close();
 
 ?>
