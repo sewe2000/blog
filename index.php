@@ -15,8 +15,6 @@ if(!isset($_SESSION['logged_in']))
 	<script src="https://kit.fontawesome.com/370a890af0.js" crossorigin="anonymous"></script>
 	<script src="scripts/work-in-progress.js" defer></script>
 	<script src="scripts/mobile-navigation.js" defer></script>
-	<script src="scripts/cool-terminal.js" defer></script>
-	<!-- <script src="scripts/time.js" defer></script> -->
 </head>
 <body>
 	<nav class="mobile-navigation-bar">≡</nav>
@@ -69,7 +67,5 @@ if(!isset($_SESSION['logged_in']))
 	<?php
 		require_once "footer.php";
 	?>
-
-
 </body>
 </html>
